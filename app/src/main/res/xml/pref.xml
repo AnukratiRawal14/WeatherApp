@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceCategory
+    android:title="Themes">
+    <CheckBoxPreference
+        android:title="Theme"
+        android:key="NIGHT"
+        android:defaultValue="false"
+        android:summaryOn="Theme Changed"
+        android:summaryOff="Default Theme"/>
+
+</PreferenceCategory>
+    <PreferenceCategory
+        android:title="Screen Orientation">
+            <ListPreference
+                android:title="Orientation"
+                android:key="ORIENTATION"
+                android:entries="@array/items_name"
+                android:entryValues="@array/items_value"
+                android:defaultValue="false"/>
+
+    </PreferenceCategory>
+</PreferenceScreen>
