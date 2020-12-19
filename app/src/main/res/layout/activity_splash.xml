@@ -15,8 +15,9 @@
         android:gravity="center_horizontal"
         android:text="Weather App"
         android:layout_marginTop="301dp"
-        android:layout_marginLeft="70dp"
+        android:layout_marginLeft="90dp"
         android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-light"
         android:textSize="35sp" />
 
     <ImageView

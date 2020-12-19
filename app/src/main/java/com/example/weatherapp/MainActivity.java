@@ -28,7 +28,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     RelativeLayout ml;
     EditText et;
@@ -54,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
         tv8 = findViewById(R.id.description);
         tv9 = findViewById(R.id.wind);
         Load_setting();
+        btn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+             getWeather(v);
+            }
+        });
 
     }
 
@@ -97,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void getWeather(View view) {
+        btn.setBackgroundColor(Color.parseColor("#3CF1FBF2"));
         String city = et.getText().toString();
         String url = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&units=imperial&appid=e20cdb577eb4eeac92af55ad6f521ac5";
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
@@ -166,5 +172,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         Load_setting();
         super.onResume();
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 }
